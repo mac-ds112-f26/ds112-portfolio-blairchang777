@@ -1,7 +1,7 @@
 ---
 title: "Univariate Viz — Exercises"
 ---
-
+hello
 
 ::: {.callout-important title="ICA Instructions"}
 Before starting, review the [ICA Instructions ⭐](https://hash-mac.github.io/ds112site-f26/activities/ica-instructions.html) for details on pair programming and activity procedures.
