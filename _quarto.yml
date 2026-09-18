@@ -77,7 +77,7 @@ book:
       chapters:
       - ica/ica-sample1.qmd
       - ica/ica914.qmd
-      - ica/ica916.qmd
+      - ica/ica916-918.qmd
 
 
     - part: "Extras"

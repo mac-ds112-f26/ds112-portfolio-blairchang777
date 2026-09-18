@@ -59,7 +59,12 @@ library(tidyverse)
 Consider some specific research questions about the difficulty `rating` of the hikes:
 
 1. How many hikes fall into each category?
+difficult:less than 10;
+easy: 12
+moderate: 28
+
 2. Are the hikes evenly distributed among these categories, or are some more common than others?
+not evenly distributed,I believe most people choose the morderate one.
 
 All of these questions can be answered with: (1) a **bar chart**; of (2) the *categorical* data recorded in the `rating` column. First, set up the plotting **frame**:
 
@@ -131,16 +136,26 @@ ggplot(hikes, aes(x = rating)) +
 Reflect on the `ggplot()` code.
 
 -   What's the purpose of the `+`? When do we use it?
+The "+" is used to connect those codes.
+
 -   We added the bars using `geom_bar()`? Why "geom"?
+It means "geometrically".
+
 -   What does `labs()` stand for?
+It is used to name the whole part of those categorical variables.
+
 -   What's the difference between `color` and `fill`?
+"Color" is for the outside line, and "fill" is for those inside things.
 
 #### Part b
 
 In general, bar charts allow us to examine the following properties of a *categorical* variable:
 
 -   **observed categories**: What categories did we observe?
+rating.
+
 -   **variability between categories**: Are observations evenly spread out among the categories, or are some categories more common than others?
+moderate.
 
 We must then *translate* this information into the *context* of our analysis, here hikes in the Adirondacks. Summarize below what you learned from the bar chart, in context.
 
@@ -148,6 +163,7 @@ We must then *translate* this information into the *context* of our analysis, he
 
 Is there anything you don't like about this barplot? For example: check out the x-axis again.
 
+It doesn't provide the specific value for the y-axes variable:Number of hikes.
 
 
 ## Exercise 6: Sad Bar Chart
