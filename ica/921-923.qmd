@@ -1,5 +1,5 @@
 ---
-title: "Bivariate Viz — Exercises"
+title: "921-923"
 ---
 
 
@@ -292,8 +292,11 @@ ggplot(elections, aes(x = repub_pct_20, fill = historical)) +
 We've now learned 3 (of many) ways to visualize the relationship between a quantitative and categorical variable: side-by-side violins, boxplots, and density plots.
 
 -   Which do you like best?
+the first density plot.
 -   What is one pro of density plots relative to boxplots?
+It shows the distribution of the data more specifictly.
 -   What is one con of density plots relative to boxplots?
+
 
 
 ## Exercise 11: Categorical vs Categorical: Intuition Check
@@ -358,11 +361,12 @@ ggplot(elections, aes(x = historical, fill = winner_20)) +
 #### Part a
 
 Name one pro and one con of using the "proportional bar plot" instead of one of the other three options.
+It can show the distribution in each categorical variable more clear and it makes the process of compare each opposite group more clear.
 
 #### Part b
 
 What's your favorite bar plot from part and why?
-
+The proportional bar chart.
 
 ## Exercise 13: Optional Practice
 
@@ -387,9 +391,8 @@ Reflect before doing anything. What types of variables are these? How might you 
 
 ```{r}
 # How do 3pm temperatures (temp3pm) differ by location?
-
-
-
+ggplot(weather, aes(x = temp3pm, fill = location)) + 
+  geom_density(alpha = 0.5)
 ```
 
 ```{r}

@@ -78,7 +78,7 @@ book:
       - ica/ica-sample1.qmd
       - ica/ica914.qmd
       - ica/ica916-918.qmd
-      - ica/ica921-923.qmd
+      - ica/921-923.qmd
 
 
     - part: "Extras"
