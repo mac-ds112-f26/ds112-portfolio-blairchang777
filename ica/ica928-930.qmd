@@ -133,13 +133,16 @@ Make a trivariate visualization that demonstrates the relationship of `sat` with
 Does it still seem that SAT scores decrease as spending increases?
 
 ```{r}
-
+ggplot(education, aes(y = sat, x = expend, color = fracCat)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
 ```
 
 ### ✏️ Explain Simpson's Paradox
 
 Putting all of this together, explain this example of **Simpson’s Paradox**. That is, why did it appear that SAT scores decrease as spending increases even though the *opposite* is true?
 
+Student participation tends to be lower among states with lower expenditures. Those same states tend to have higher SAT scores because of the self-selection of who participates.
 
 
 ## Heat Maps & Star Plots (Optional)

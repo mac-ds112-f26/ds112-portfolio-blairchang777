@@ -79,7 +79,7 @@ book:
       - ica/ica914.qmd
       - ica/ica916-918.qmd
       - ica/921-923.qmd
-      - ica/ica928-930
+      - ica/ica928-930.qmd
 
 
     - part: "Extras"
