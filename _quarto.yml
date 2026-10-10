@@ -21,8 +21,8 @@ number-depth: 2
 
 
 book:
-  title: "COMP/STAT212 Portfolio"
-  author: "Your Name Here"
+  title: "COMP/STAT 212 | Data Visualization Portfolio"
+  author: "Blair Chang"
   date: today  # use today to update date published based on last time project was edited
   date-format: full
   # favicon: path/to/favorite-logo.png
@@ -45,7 +45,7 @@ book:
       # footer text
 
   sidebar:
-    title: "Your Name Here"
+    title: "Blair Chang"
     logo: assets/sidebar-logo.png
     logo-alt: "Random negative space illustration"
     collapse-level: 2
@@ -60,20 +60,20 @@ book:
     - text: "Welcome"
       href: index.qmd
 
-    - part: "Personal Viz Journey"
+    - part: "🎨 Personal Viz Journey"
       chapters:
       - pvj/pvj-01.qmd
 
-    - part: "TidyTuesday"
+    - part: "📊 TidyTuesday"
       chapters:
       - tt/2025-07-08.qmd
       - tt/2025-07-15.qmd
 
-    - part: "Pre-Class Learnings"
+    - part: "📚 Pre-Class Learnings"
       chapters:
       - pcl/pcl.qmd
 
-    - part: "In-Class Activities"
+    - part: "💻 In-Class Activities"
       chapters:
       - ica/ica-sample1.qmd
       - ica/ica914.qmd
@@ -90,9 +90,10 @@ book:
 
 
 
+
 format:
   html:
-    theme: # bootswatch themes--other options https://bootswatch.com/
+    theme:
       light: flatly
       dark: darkly
     search: true
@@ -117,11 +118,6 @@ format:
     #   sidebar-width: 200px
     #   body-width: 950px
     #   margin-width: 150px
-
-  # pdf:
-  #   documentclass: scrreprt
-  #   keep-tex: false
-
 
 
 execute:
