@@ -317,3 +317,83 @@ th, td {
 main a:hover {
   color: #087f72;
 }
+
+/* =====================================
+   15. Timeline-style table of contents
+   ===================================== */
+
+/* Remove default bullets */
+#TOC ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+/* Main list */
+#TOC > ul {
+  padding-left: 0;
+}
+
+/* Spacing between entries */
+#TOC li {
+  position: relative;
+  margin: 0;
+  padding: 0.25em 0;
+}
+
+/* TOC links */
+#TOC .nav-link {
+  display: block;
+  position: relative;
+  padding: 0.35em 0.5em 0.35em 1.8em;
+  border-radius: 6px;
+  color: var(--bs-body-color);
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+/* Circular timeline nodes */
+#TOC .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0.2em;
+  top: 0.8em;
+  width: 0.65em;
+  height: 0.65em;
+  border: 3px solid #a8ceff;
+  border-radius: 50%;
+  background: var(--bs-body-bg);
+  box-sizing: border-box;
+}
+
+/* Nested sections */
+#TOC ul ul {
+  margin-left: 0.5em;
+  padding-left: 1em;
+  border-left: 2px solid #f0b8f5;
+}
+
+/* Smaller nodes for nested entries */
+#TOC ul ul .nav-link::before {
+  width: 0.55em;
+  height: 0.55em;
+  left: 0.25em;
+  top: 0.85em;
+  border: 3px solid #f0b8f5;
+}
+
+/* Current section */
+#TOC .nav-link.active {
+  color: #18bc9c;
+  font-weight: 600;
+}
+
+#TOC .nav-link.active::before {
+  background: #7c3aed;
+  border-color: #7c3aed;
+}
+
+/* Hover effect */
+#TOC .nav-link:hover {
+  color: #18bc9c;
+  text-decoration: none;
+}

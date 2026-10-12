@@ -21,7 +21,7 @@ number-depth: 2
 
 
 book:
-  title: "COMP/STAT 212 | Data Visualization Portfolio"
+  title: "COMP/STAT 112 | Data Visualization Portfolio"
   author: "Blair Chang"
   date: today  # use today to update date published based on last time project was edited
   date-format: full
@@ -81,6 +81,8 @@ book:
       - ica/ica921-923.qmd
       - ica/ica928-930.qmd
       - ica/ica102-105.qmd
+      - ica/ica107.qmd
+      - ica/ica109-1012.qmd
 
 
     - part: "Extras"
