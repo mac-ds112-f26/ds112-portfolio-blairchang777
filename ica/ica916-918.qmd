@@ -368,3 +368,29 @@ Check out the [RStudio Data Visualization cheat sheet](https://raw.githubusercon
 ::: {.callout-warning title="Check → Commit → Push"}
 When done, don't forgot to click **Render Book** and check the resulting HTML files. If happy, jump to GitHub Desktop and commit the changes with the message **Finish uni viz** and push to GitHub.  Wait few seconds, then visit your portfolio website and make sure the changes are there.
 :::
+
+```{r}
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(binwidth = 200, fill = "skyblue", color = "white") +
+  labs(
+     title = "Univariate Viz: Histogram of Hiking Elevations",
+     subtitle = "Using discrete bins to show frequency counts",
+     x = "Highest Elevation (feet)",
+     y = "Frequency (Count)"
+  ) +
+  theme_minimal()
+```
+```{r}
+ggplot(hikes, aes(x = elevation)) +
+  geom_density(fill = "darkorange", alpha = 0.5, color = "darkred", linewidth = 1) +
+  labs(
+     title = "Univariate Viz: Density Plot of Hiking Elevations",
+     subtitle = "Using kernel smoothing to show distribution shape",
+     x = "Highest Elevation (feet)",
+     y = "Density"
+  ) +
+  theme_minimal()
+```
+
+
+
