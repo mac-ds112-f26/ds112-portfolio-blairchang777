@@ -10,45 +10,39 @@ library(ggplot2)
 
 music <- read_csv("MUSIC.csv")
 
-month_order <- c("July", "August", "September", "October")
+
+library(tidyverse)
+
+music <- read_csv("MUSIC.csv")
 
 music <- music %>%
   mutate(
-    Month = factor(Month, levels = month_order),
-    Rank = as.integer(Rank)
+    Month = fct_relevel(
+      Month,
+      "July", "August", "September", "October"
+    )
   )
 
-
-genre_summary <- music %>%
-  count(Month, `Primary Genre`, name = "song_count") %>%
-  group_by(Month) %>%
-  mutate(
-    song_share = song_count / sum(song_count)
-  ) %>%
-  ungroup()
-
-print(genre_summary)
-
-
-music1<- ggplot(
-  genre_summary,
-  aes(x = Month, y = song_count, fill = `Primary Genre`)
+ggplot(
+  music,
+  aes(
+    x = Month,
+    y = Rank,
+    color = `Primary Genre`
+  )
 ) +
-  geom_col() +
+  geom_point(size = 5) +
+  scale_y_reverse() +
   labs(
-    title = "How My Top 10 Music Genres Changed",
-    subtitle = "Genre composition of my monthly Top 10 songs",
+    title = "How My Music Taste Changed",
+    subtitle = "My Top 10 Songs from July to October",
     x = "Month",
-    y = "Number of songs in Top 10",
-    fill = "Primary genre",
-    caption = paste(
-      "Source: Personal QQ Music data.",
-      "Counts represent Top 10 entries, not total plays."
-    )
+    y = "Song Rank",
+    color = "Primary Genre"
   ) +
-  theme_minimal(base_size = 12)
+  theme_minimal()
 
-print(music1)
+```
 
 
 ```
